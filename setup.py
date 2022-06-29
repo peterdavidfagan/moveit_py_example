@@ -26,7 +26,8 @@ setup(
     license="license",
     entry_points={
         "console_scripts": [
-            "pose_goal = moveit_py_example.pose_goal:main"
+            "pose_goal = moveit_py_example.pose_goal:main",
+            "planning_scene_interface = moveit_py_example.planning_scene_interface:main"
             ],
         }
         )
