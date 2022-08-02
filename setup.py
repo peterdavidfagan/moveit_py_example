@@ -27,7 +27,9 @@ setup(
     entry_points={
         "console_scripts": [
             "pose_goal = moveit_py_example.pose_goal:main",
-            "planning_scene_interface = moveit_py_example.planning_scene_interface:main"
+            "planning_scene_interface = moveit_py_example.planning_scene_interface:main",
+            "planning_scene_monitor = moveit_py_example.planning_scene_monitor:main",
+            "servo = moveit_py_example.servo:main",
             ],
         }
         )
