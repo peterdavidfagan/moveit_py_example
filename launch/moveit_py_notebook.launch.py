@@ -18,14 +18,6 @@ def generate_launch_description():
         .to_moveit_configs()
     )
 
-    moveit_py_node = Node(
-        name="moveit_py",
-        package="moveit_py_example",
-        executable="planning_scene_interface",
-        output="screen",
-        parameters=[moveit_config.to_dict()],
-    )
-
     rviz_config_file = (
         get_package_share_directory("moveit_py_example") + "/launch/moveit_py.rviz"
     )
@@ -83,12 +75,13 @@ def generate_launch_description():
             )
         ]
 
+    start_notebook = ExecuteProcess(cmd = ["pip3 install notebook && python3 -m notebook"], shell = True, output = "screen")
     return LaunchDescription(
         [
+            start_notebook,
             static_tf,
             robot_state_publisher,
             rviz_node,
-            moveit_py_node,
             ros2_control_node,
         ]
         + load_controllers

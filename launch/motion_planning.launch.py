@@ -21,7 +21,7 @@ def generate_launch_description():
     moveit_py_node = Node(
         name="moveit_py",
         package="moveit_py_example",
-        executable="pose_goal",
+        executable="motion_planning",
         output="screen",
         parameters=[moveit_config.to_dict()],
     )
