@@ -1,5 +1,5 @@
 """
-A basic example of planning and executing a pose goal with moveit_py.
+A basic example of interacting with the planning scene using moveit_py.
 """
 import rclpy
 from rclpy.node import Node
